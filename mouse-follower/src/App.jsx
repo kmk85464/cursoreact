@@ -15,7 +15,12 @@ function App() {
     if (enabled){
     window.addEventListener('pointermove',handleMove)
     }
-    return () => {} //para limpiar el efecto
+    //para limpiar el efecto cuando el elemento se desmonte o cuando cambian las dependencias antes de ejecutar
+    //nuevamente el efecto
+    return () => {
+    console.log('limpiando')
+    window.removeEventListener('pointermove',handleMove)
+    } 
   }, [enabled])
   console.log('render')
 
