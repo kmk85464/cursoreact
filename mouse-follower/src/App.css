@@ -1,0 +1,20 @@
+.contenedor{
+  flex-direction: column;      /* <--- importante */
+  background-color: gray;
+  justify-content: flex-start; /* arriba */
+  align-items: center;         /* centrado horizontal */
+  padding-top: 20px;           /* opcional */
+}
+.h4 {
+  font-size: 13px;
+  color: red;
+  text-align: center; /* centra el texto */
+}
+.boton {
+  margin-top: 20px; /* espacio arriba del botón */
+  padding: 10px 20px; /* espacio dentro del botón */
+  font-size: 14px; /* tamaño de la fuente */
+  background-color: blue; /* color de fondo del botón */
+  cursor: pointer; /* cambia el cursor al pasar sobre el  botón */
+  text-align: center;
+}
