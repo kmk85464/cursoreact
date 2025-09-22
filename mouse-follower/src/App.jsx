@@ -15,6 +15,7 @@ function App() {
     if (enabled){
     window.addEventListener('pointermove',handleMove)
     }
+    return () => {} //para limpiar el efecto
   }, [enabled])
   console.log('render')
 
