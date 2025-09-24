@@ -5,17 +5,19 @@ const CAT_ENDPOINT_RANDOM_FACT='https://catfact.ninja/fact'
 export default function App() {
   const [fact,setFact]=useState("")
   const[imageUrl,setImageUrl]=useState("")
-
-  //use efect para llamar a la api
-  useEffect(()=>{
+  const handleClick=()=>{
     fetch(CAT_ENDPOINT_RANDOM_FACT)
     .then(res=>res.json())
     .then(data=>{
       const{fact}=data
       setFact(fact)
       })
-  }, [])
+  }
 
+     //use efect para llamar a la api
+  useEffect((handleClick)=>{
+    
+  }, [])
 //use efect para recuperar la imagen
 useEffect(()=>{
   if (!fact) return
@@ -31,6 +33,7 @@ useEffect(()=>{
 
   return( 
     <main>
+      <button onClick={handleClick}>Obtener nuevo Fact</button>
       <h1>App de Gatitos</h1>
       {fact&& <p>{fact}</p>}
       {imageUrl && <img src={imageUrl} alt={`image extracted using three first word ${fact}`} />}
