@@ -1,5 +1,5 @@
 import { NoMovies } from "./NoMovies"
-
+import responsemovies from '../mocks/conresultados.json'
 function ListOfMovies ({ movies }) {
 return (   
     <ul>
@@ -15,14 +15,15 @@ return (
     )
 }
 
-export function Movies ({movies}) {
+export function Movies ({}) {
   
-  const movies =responsemovies.Search
-  const hasMovies = movies?.length > 0
+  const fetchmovies =responsemovies.Search
+   console.log('Películas cargadas:', fetchmovies)
+  const hasMovies = fetchmovies?.length > 0
 
     return (
       hasMovies
-        ? <Movies movies={movies} />
+        ? <ListOfMovies movies={fetchmovies} />
         : <NoMovies />
     )
 }

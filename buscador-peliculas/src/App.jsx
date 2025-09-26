@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import responsemovies from './mocks/conresultados.json'
-import sinresultados from './mocks/sinresultados.json'
-import movie from './components/Movies'
+import { Movies } from './components/Movies'
 import { NoMovies } from './components/NoMovies'
 function App() {
 
@@ -17,7 +15,7 @@ function App() {
         </header>
         <main className='main'>
           {
-            <Movies />
+            <Movies  />
             
           }
   
