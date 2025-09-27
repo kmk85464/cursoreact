@@ -1,5 +1,3 @@
-export function NoMovies() {
-  return (
-    <p>Movie not found</p>
-  )
+export default function NoMovies() {
+  return <p>Movie not found</p>
 }
